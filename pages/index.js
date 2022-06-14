@@ -1,3 +1,4 @@
+//import { useState } from 'react'
 import { useState } from 'react'
 import Head from 'next/head'
 import Web3 from 'web3'
@@ -12,7 +13,8 @@ export default function Home() {
 
   const connectWalletHandler = async () => {
     /**Check if Metamask is installed */
-    if(typeof window !== "undifined" && typeof window.ethereum !== "undefined") {
+    //&& typeof window.ethereum !== "undefined"
+    if( typeof window !== "undifined" ) {
       try {
         /**request wallet connection */
         await window.ethereum.request({ method: "eth_requestAccounts"})
